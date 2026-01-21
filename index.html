@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Explore Nepal</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(0,82,212,0.08) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(255,221,0,0.1) 0%, transparent 40%),
+    linear-gradient(135deg, #e0ecff, #f9fbff);
+  color:#333;
+}
+
+/* ===== HEADER ===== */
+header{
+  background:linear-gradient(to right,#0052d4,#4364f7);
+  padding:18px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+header h1{
+  color:white;
+}
+
+nav a{
+  color:white;
+  margin-left:20px;
+  text-decoration:none;
+  font-weight:500;
+  position:relative;
+}
+
+nav a::after{
+  content:"";
+  width:0;
+  height:2px;
+  background:#ffdd00;
+  position:absolute;
+  bottom:-5px;
+  left:0;
+  transition:0.3s;
+}
+
+nav a:hover::after{
+  width:100%;
+}
+
+/* ===== HERO / BANNER ===== */
+.hero{
+  height:90vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+    url("images/banner.jpg") center/cover no-repeat;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+}
+
+.hero h2{
+  font-size:48px;
+}
+
+.hero p{
+  font-size:18px;
+  margin:15px 0;
+}
+
+.hero a{
+  background:#ffdd00;
+  color:black;
+  padding:12px 30px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.hero a:hover{
+  background:#ffc400;
+}
+
+/* ===== SECTIONS ===== */
+section:not(.hero){
+  background:rgba(255,255,255,0.9);
+  margin:50px auto;
+  padding:60px 20px;
+  width:90%;
+  border-radius:25px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.08);
+}
+
+.section-title{
+  text-align:center;
+  font-size:32px;
+  color:#0052d4;
+  margin-bottom:40px;
+}
+
+/* ===== CARDS ===== */
+.cards{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:30px;
+}
+
+.card{
+  background:white;
+  width:280px;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,0.15);
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:translateY(-12px) scale(1.02);
+  box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.card h3{
+  margin:15px;
+  color:#0052d4;
+}
+
+.card p{
+  margin:0 15px 15px;
+  font-size:14px;
+}
+
+.price{
+  display:block;
+  font-size:22px;
+  font-weight:600;
+  color:#ff9800;
+  margin:10px 15px 20px;
+}
+
+/* ===== CONTACT ===== */
+.contact-box{
+  max-width:600px;
+  margin:auto;
+  padding:40px;
+  border-radius:25px;
+  background:rgba(255,255,255,0.75);
+  backdrop-filter:blur(10px);
+  box-shadow:0 25px 60px rgba(0,0,0,0.15);
+}
+
+input,textarea{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-family:inherit;
+}
+
+button{
+  background:#0052d4;
+  color:white;
+  padding:12px 30px;
+  border:none;
+  border-radius:25px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#003caa;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#111;
+  color:#aaa;
+  text-align:center;
+  padding:20px;
+  margin-top:50px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  header{
+    flex-direction:column;
+  }
+  .hero h2{
+    font-size:32px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1> Tourism Of Nepal</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#destinations">Destinations</a>
+    <a href="#packages">Packages</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HOME / BANNER -->
+<section class="hero" id="home">
+  <h2>Discover the Beauty of Nepal</h2>
+  <p>Mountains • Culture • Adventure</p>
+  <a href="#destinations">Explore Now</a>
+</section>
+
+<!-- DESTINATIONS -->
+<section id="destinations">
+  <h2 class="section-title">Popular Destinations</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="kathmandu.jpg" alt="Kathmandu city">
+      <h3>Kathmandu</h3>
+      <p>Kathmandu is the capital city of Nepal and is rich in history, culture, and traditions.
+It is famous for ancient temples, heritage sites, and vibrant local life..</p>
+  <a href="#kathmandu-details">View Details</a>
+  <div id="kathmandu-details" class="detail-box">
+    <strong>About Kathmandu:</strong><br><br>
+
+    Kathmandu is the cultural and historical heart of Nepal.
+    It is home to many UNESCO World Heritage Sites.<br><br>
+
+    <strong>Main Attractions:</strong>
+    <ul>
+      <li>Pashupatinath Temple</li>
+      <li>Swayambhunath</li>
+      <li>Kathmandu Durbar Square</li>
+    </ul>
+
+    <strong>Best Time to Visit:</strong> March – May
+  </div>
+</div>
+    </div>
+    <div class="card">
+      <img src="pokhara.jpg" alt="Pokhara lakes and mountains">
+      <h3>Pokhara</h3>
+      <p>Pokhara is a beautiful tourist city in Nepal, famous for Phewa Lake and stunning views of the Annapurna and Machhapuchhre mountains.
+It is a major center for adventure activities like trekking and paragliding and is known as the Tourism Capital of Nepal.</p>
+     <a href="#pokhara-details">View Details</a>
+</div>
+    <div class="card">
+      <img src="lumbini.jpg" alt="Lumbini birthplace of Buddha">
+      <h3>Lumbini</h3>
+      <p>lumbini is a peaceful place in Nepal and the birthplace of Lord Buddha.
+It is an important religious and cultural site visited by people from all over the world..</p>
+  <a href="#Lumbini-details">View Details</a>  
+</div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section id="packages">
+  <h2 class="section-title">Tour Packages</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Basic Tour</h3>
+      <p>🗓 3 Days – Kathmandu</p>
+      <span class="price">NPR 1,500</span>
+    </div>
+    <div class="card">
+      <h3>Adventure Tour</h3>
+      <p>🗓 Pokhara + Trekking</p>
+      <span class="price">NPR 3,500</span>
+    </div>
+    <div class="card">
+      <h3>Full Nepal Tour</h3>
+      <p>🗓 7 Days Complete Trip</p>
+      <span class="price">NPR 6,000</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2 class="section-title">Contact Us</h2>
+  <div class="contact-box">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="4" placeholder="Your Message"></textarea>
+    <button type="submit">Send Message</button>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Explore Nepal | Group Tourism Project</p>
+</footer>
+
+</body>
+</html>
